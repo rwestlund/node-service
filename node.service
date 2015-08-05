@@ -1,0 +1,15 @@
+[Unit]
+Description=Nodejs server
+Wants=network.target
+Requires=postgresql.service
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+Restart=always
+Environment="NEW_USER=www" "NEW_GROUP=www"
+WorkingDirectory=/home/randy/myproject
+ExecStart=/usr/bin/node /home/randy/myproject/bin/www
+
+[Install]
+WantedBy=multi-user.target
