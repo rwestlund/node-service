@@ -16,8 +16,8 @@ cp node-service/node.service /etc/systemd/system/
 systemctl enable node
 ```
 
-`NEW_USER` and `NEW_GROUP` may be used to drop node's root privileges after
-binding to ports.
+You'll need to edit the file to specify your paths.  `NEW_USER` and `NEW_GROUP`
+may be used to drop node's root privileges after binding to ports.
 
 ## Notes
 
